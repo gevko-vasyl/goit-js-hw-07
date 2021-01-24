@@ -18,11 +18,12 @@ const images = [
 
 
 
-const gallery = document.querySelector('ul#gallery')
-const galleryAdder=images.map(image => {
-    const galleryItem = gallery.insertAdjacentHTML('beforeend', `<li><img src='${image.url}' alt='${image.alt}' width= 400px></li>`); 
+const gallery = document.querySelector('ul#gallery');
 
+images.forEach(image => {
+gallery.insertAdjacentHTML('beforeend', `<li><img src='${image.url}' alt='${image.alt}' width= 400px></li>`); 
 });
+
 gallery.style.listStyle = 'none';
 gallery.style.display = 'flex';
 gallery.style.justifyContent = 'space-between';
