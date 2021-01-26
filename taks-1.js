@@ -1,4 +1,4 @@
-const categotyList = [...document.querySelector('ul#categories').children];
+const categotyList = document.querySelector('ul#categories').children;
 console.log(`В списке ${categotyList.length} категории.`);
 
 
