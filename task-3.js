@@ -20,9 +20,11 @@ const images = [
 
 const gallery = document.querySelector('ul#gallery');
 
-images.forEach(image => {
-gallery.insertAdjacentHTML('beforeend', `<li><img src='${image.url}' alt='${image.alt}' width= 400px></li>`); 
-});
+const markup = images.map(({ url, alt }) => `<li><img src='${url}' alt='${alt}' width= 400px></li>`).join();
+
+gallery.insertAdjacentHTML('beforeend', markup);
+
+
 
 gallery.style.listStyle = 'none';
 gallery.style.display = 'flex';
